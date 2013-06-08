@@ -1,16 +1,12 @@
+#slideshow -t s5blank -o output derek
 EXTENSION := .md
 THEME := s5blank 
-OUTPUTDIR := './'
+#slideshow -t $(THEME) -o $(OUTPUTDIR)output-$@ $@
 
-SOURCES = $(patsubst %.md,%,$(wildcard *$(EXTENSION)))
-OUTPUTS = $(patsubst %.md,output-%,$(wildcard *$(EXTENSION)))
-
-#slideshow -t s5blank -o output derek
-%: %.md
-	slideshow -t $(THEME) -o $(OUTPUTDIR)output-$@ $@
+OUTPUTS = $(patsubst %.md,output/%.html,$(wildcard *$(EXTENSION)))
 
 .SECONDEXPANSION:
-$(OUTPUTS): $$(patsubst output-%,%,$$@)
-	mkdir -p "$@"
+%.html: $$(patsubst output/%.html,%.md,$$@)
+	@echo outputs $@
 
-all: $(SOURCES)
+all: $(OUTPUTS)
