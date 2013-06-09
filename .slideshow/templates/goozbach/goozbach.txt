@@ -18,6 +18,7 @@ __file__.html slides.html.erb
 ./lib/jquery-1.7.1.min.js
 ./ui/default/blank.gif
 ./ui/default/bodybg.gif
+./ui/default/G.gif
 ./ui/default/framing.css
 ./ui/default/iepngfix.htc
 ./ui/default/opera.css
@@ -76,3 +77,8 @@ __file__.html slides.html.erb
 ./yaml/screen/screen-FULLPAGE-layout.css
 ./yaml/screen/screen-PAGE-layout.css
 ./yaml/screen/typography.css
+./css/flexible-columns.css
+./css/flexible-grids.css
+./css/styles.css
+./css/goozbach.css
+./45427c60eda6298b2783dd8367123c89.jpg
