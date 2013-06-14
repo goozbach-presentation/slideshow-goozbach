@@ -8,7 +8,7 @@ all: $(CONTACTFILE)
 
 $(CONTACTFILE):
 	wget -qN -O $(CONTACTFILE) $(CONTACTURL)
-	#sed -i '' 's/http:\/\/gravatar[^\/]*\(.*\)/\1/g' $(CONTACTFILE)
+	sed -i '' 's/http:\/\/.*\/\([^\/]*\.jpg\)/\1/g' $(CONTACTFILE)
 
 $(notdir $(shell grep -o 'http://gravatar[^"]*' $(CONTACTFILE))): $(CONTACTFILE)
 	wget -qN -O $(notdir $(shell grep -o 'http://gravatar[^"]*' $(CONTACTFILE))) $(shell grep -o 'http://gravatar[^"]*' $(CONTACTFILE))
