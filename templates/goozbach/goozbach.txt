@@ -82,3 +82,4 @@ __file__.html slides.html.erb
 ./css/styles.css
 ./css/goozbach.css
 ./45427c60eda6298b2783dd8367123c89.jpg
+./contact.html
