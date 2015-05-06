@@ -1,0 +1,3 @@
+[submodule "templates/reveal"]
+	path = templates/reveal
+	url = https://github.com/goozbach-presentation/slideshow-reveal.js.git
