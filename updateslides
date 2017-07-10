@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+lead='<!-- start of contact -->'
+tail='<!-- end of contact -->'
+gsed -i "/${lead}/,/${tail}/{ /${lead}/{p; r contact.html
+	        }; /${tail}/p; d }"  slides.html
